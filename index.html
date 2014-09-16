@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>Responsive Websites</title>
+	<link rel="stylesheet" href="grid.css" type="text/css" nmedia="screen">
+	<link rel="stylesheet" href="responsive.css" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+
+<body>
+  <div class="container clearfix">
+	<div>
+		<h1 class="title">Make a Responsive Website</h1>
+	</div>
+	<div>
+		<h2 id="sub-title">Cheatsheet: By Steven Inouye</h2>
+	</div>
+
+	<!--first four squares each own div -->
+<div class="big-sqr grid_10">
+	<a href="#fixed-btn">
+		<div class="sqr grid_4">
+			<h4>Fixed</h4>
+		</div>
+	</a>
+
+	<a href="#fluid-btn">
+		<div class="sqr grid_4">
+			<h4>Fluid</h4>
+		</div></a>
+
+	<a href="#adaptive-btn">
+		<div class="sqr grid_4">
+			<h4>Adaptive</h4>
+		</div>
+	</a>
+
+	<a href="#responsive-btn">
+	<div class="sqr grid_4">
+		<h4>Responsive</h4>
+	</div>
+	</a>
+</div>
+
+	<!-- Fixed part of the webpage-->
+	<div>
+		<a name = "fixed-btn"></a><h2 id="fixed-sect" class="grid_9"> Fixed Webpage </h2>
+
+		<h3>Here is my fixed webpage: <a class="my-webpage" href="http://www.steveninouye.net">Steven Inouye</a></h3>
+			<p class="fixed-sect-p" class="grid_10"> For this cheatsheet to be helpful you must already have a fixed website. I used Treehouse to help design my website. There is also W3, Codeschool, CodeAcademy, and many others guides to help you create your first fixed webpage. Once you have a fixed webpage, we can begin making it responsive. A responsive website is great, because it can be viewed correctly, regardless of device, screensize, or resolution. With so many new devices hitting the market, we need to devise code that will stay relevant regardless of the new technology. We will do this by taking our fixed website and making it responsive. Get ready to jump into an adventure, we are about to learn a lot!</p>
+	</div>
+
+	<!-- Fluid part of the page -->
+
+	<div>
+		<a name = "fluid-btn"><h2 id="fixed-sect" class="grid_9"> Fluid Webpage </h2></a>
+		<h3>What is a Fluid Webpage?</h3>
+			<p class="fixed-sect-p">A fluid webpage is our first step in making our fixed website, responsive. It is an amazing step up from the previous fixed website. As we change screen sizes our webpage will scale, thus it will change size proportionally with the screensize. Rather than just getting cut off, when the screensize is changed. This will allow the user to interact more comfortably while viewing our webpage despite what device they are using. <br/>  Pros: realitively easy to create and will scale with different medias. <br/> Cons: will not automatically adjust to standard screen sizes, will not use media queries, which we will get into later. Let's jump in!</p>
+	</div>
+
+	<div class="big-sqr2 grid_10">
+
+		<a href="#web-types-btn">
+			<div class="sqr2 grid_4">
+				<h4>Web Types</h4>
+		</a>
+			</div>
+
+		<a href="#convert-font-btn">
+			<div class="sqr2 grid_4">
+				<h4>Convert Font</h4>
+			</div>
+		</a>
+
+		<a href="#container-widths-btn">
+			<div class="sqr2 grid_4">
+				<h4>Container Widths</h4>
+			</div>
+		</a>
+
+		<a href="#margins-btn">
+			<div class="sqr2 grid_4">
+				<h4>Margins</h4>
+			</div>
+		</a>
+
+	</div>
+
+
+	<div class="web-types-list-total">
+		<div id="web-types-list" class="grid_4">
+			<a name = "web-types-btn"><h3>Web Types</h3></a>
+			 <p>Before we dive into the math we should review the different types of webpages.</p>
+
+					 <ul>
+					 	<li>Fixed: This is your clasic webpage. No scalability.</li>
+					 	<li>Fluid: This webpage does scale with different screen resolutions. However, without media queries this is only so powerful.</li>
+					 	<li>Adaptive: An adaptive webpage utalizes media queries. They are resolution driven, thus for specific devices we can have a perfectly designed website.</li>
+					 	<li>Responsive: Adaptive based on relative widths, this time with content driven media queries. Allowing for perfect website viewing regardless of device screen size or resolution.</li>
+					 </ul>
+		</div>
+
+
+		<div id="web-types-list" class="grid_4">
+			<a name = "convert-font-btn"><h3>Convert the font!</h3></a>
+			<p>We are finally about to get into some math. Have no fear, it is pretty basic and I am sure you will have no issues. We are going to convert the font form pixels to ems</p>
+					<ul>
+					 	<li>Convert font size from px ---> em </li>
+					 	<li>To do this we get the target pixel, the item we want to resize, and devide it by the context pixel size, the default size of the font</li>
+					 	<li class="equation-list">Target(px) / Context(px) = Results(em)<br/> 24px(target) / 16px(context and default) = 1.500em </li>
+					 	<li>If you are targeting a nested font, the font-size it is nested in, becomes the context.</li>
+					 	<li>Based on the last equation if we take a size 12px font nexted inside a 16px font</li>
+					 	<li class="equation-list"> 12px / 16px = 0.75em </li>
+					</ul>
+		</div>
+
+		<div id="web-types-list" class="grid_4">
+			<a name = "container-widths-btn"><h3>Working with Percentages</h3></a>
+			<p>Great now our font is scalable, but what about the pixel settings for widths and margins. We will start by making the container the correct proportional size.</p>
+					<ul>
+					 	<li>Convert container from px ---> percentages </li>
+					 	<li>We are going to start with the container, remember this was set to 1000px width</li>
+					 	<li class="equation-list">Set Max-Width: 1000px;</li>
+					 	<li>This will tell the webpage that the max possible width is 1000px</li>
+					 	<li>Then we want to set the container's actual wdith to 90%</li>
+					 	<li class="equation-list"> Width: 90%; </li>
+					 	<li>Now that the main container is scaled lets move onto the grid widths</li>
+					 	<li>Make the final grid 100%, then for all proceeding grids divide its sizepx(grid size) by 1000px(total size) * 100 </li>
+					 	<li class="equation-list"> grid_11 915px / 1000px = .915 * 100 = 91.5% </li>
+					</ul>
+		</div>
+
+		<div id="web-types-list" class="grid_4">
+			<a name = "margins-btn"><h3>Convert the Margins</h3></a>
+			<p>Awesome job, we now have the font-size in ems and the container div in percentages. Now we need to make sure the margins scale.</p>
+					<ul>
+					 	<li>Convert margins from px ---> percentages </li>
+					 	<li>In order to do this conversion, we take the margin px and divide them by the containing divs px</li>
+					 	<li class="equation-list">10px(margin) / 500px(containingdiv) = .02 * 100 = 2%</li>
+					 	<li>Remember this is based off of the containing div</li>
+					 	<li>With margins set we can now fix our final issue, which is images</li>
+					 	<li>Set images to have a max-width of 100% in the stylesheet and we will have scalable images</li>
+					 	<li class="equation-list"> img {<br/>max-width:100%;<br/>} </li>
+					</ul>
+		</div>
+	</div>
+
+
+	<div class="grid_10">
+		<a name = "adaptive-btn"><h2 id="fixed-sect" class="grid_9"> Adaptive Webpage </h2></a>
+			<h3 class="grid_10">Time to begin making an Adaptive Webpage</h3>
+			<div class="fixed-sect-p adaptive-style grid_10">
+				<p>Wow, the progress we have made is amazing, but we are not through yet. A fluid webpage is great and will scale with different screensizes, however it will not adapt to these different resolutions. Meaning, whether we view the webpage on a mobile device, a tablet, or a PC it will always look the same. Most of the time as we scale to smaller devices we would like to have less viewable content but have that content be more specific. We are going to achieve this by using media queries. Media queries are the huge step that is going to allow us to make self adapting webpage. Once mastered we will only be steps away from completing a responsive webpage.</p>
+			</div>
+	</div>
+
+	<div class="adaptive-total grid_10">
+		<div class="adaptive-style2 grid_2">
+			<h3> Google Window Resizer </h3>
+				<p class="fixed-sect-p2">Google Window Resizer allows us to check different screen sizes and resolutions inside the web browser. Download the Google chrome extension and get ready to play.</p>
+				<p class="chrome-list"><a class="chrome-list" href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en">Google Windows Resizer</a><br/>
+				<a class="chrome-list" href="http://www.mobify.com/insights/70-stunning-responsive-sites-for-your-inspiration/#/design/">Design and Advertise: Responsive Website</a></p>
+			<div>
+			<h3> Typical Screen Sizes </h3>
+				<ul  class="resolution-list">
+					<li>480x800 Old Cellphones</li><br/>
+					<li>640x960 iPhone</li><br/>
+					<li>768x1280 High-End Phone</li><br/>
+					<li>768x1024 iPad</li><br/>
+					<li>768x1366 Tablets</li><br/>
+					<li>1280x1024 Small Computer</li><br/>
+					<li>1680x1050 Large Desktop</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="adaptive-style2 grid_7">
+			<h3 id="media-queries-head"> Media Queries </h3>
+			<p class="fixed-sect-p2"> Media queries are the most powerful tools when dealing with adaptive webpages. It allows for the webpage to "adapt" to different screensizes and resolutions making a website as user friendly as possible. Generally when dealing with media queries we want to make the most important imformation easily accessible on smaller screen devices. <br/><br/> So what does the user want out of our website? When shrinking our fluid webpage are aspects overlapping? Are the important functions easily navigated?<br/><br/>These questions and more are going to be what influences the content on your website. We have already worked with media queries, look at the head document. It is hard to explain how to make a website adaptive, so we will show you some sample code.</p>
+		<div class="media-combine">
+			<div class="media-example grid_2">
+				<h6>@media screen and (max-width: 480px) {</h6>
+					<p class="media-grid">	.grid_1,<br/>	.grid_2,<br/>	.grid_3,<br/>	.grid_4,<br/>	.grid_5,<br/>	.grid_6,<br/>	.grid_7,<br/>	.grid_8,<br/>	.grid_9,<br/>	.grid_10 { <br/>	 width:100%;<br/>	}<br/>}</p>
+			</div>
+			<div class="media-example2 grid_7">
+				<h6> Let's dive into the code </h6>
+				<p class="media-explan">So, what is that partially familure and partially alien css code doing? the @media is alererting the computer media from "screen" to type of screen we are looking at. Distinguishing the screen based on the width of the monitor. We used a max-width calculation which will take into account our changes listed, up until a screen reaches a size greater than 480px in width. So with multiple media queries we can set up different layouts for different screen widths. The code to the left(or above), is what I used to make this website which has 2 columns to only have 1 when viewed on a smaller device.<br/> Great, we have media queries for different screensizes by using Google Window Resizer and implementing small edits. However, you still need to reference this piece of css in your html. You do this by using a viewport meta tag. Add the following meta tag to the head of your document like the media tags.</p>
+				<p class="meta-tag">< meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable=no ></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid_10">
+		<a name = "responsive-btn"><h2 id="fixed-sect" class="grid_9"> Responsive Webpage </h2></a>
+			<h3 class="grid_10">Road to the end: A Responsive Webpage!</h3>
+			<div class="fixed-sect-p2 adaptive-style grid_10">
+				<p>Congratulations, our website is looking pretty freaking cool. We went from having a fixed website, to a beautiful adaptive website. The best part is, we have done all the hard parts :). Of course there are a million ways we can make a website more user friendly, but the last section we will go through will have your website looking spiffy on all devices. Yet if you strive for perfection accross all devices, I will include ways to give you spectacular looking website at the end of this cheatsheet. So lets get back into the drivers seat and get ready to make this website ready to go on any device!</p>
+			</div>
+	</div>
+
+  <div class="adaptive-style3 fixed-sect-p2 grid_9">
+	<div class="break-point grid_6">
+		<h3>Break Point</h3>
+		<p> Well we are here, a webpage that is adaptive to certain website sizes. However there are many more screen resolutions we are not tailoring to. So we require a change of mind, rather than creating a website that fits to certain devices, we need to create a website that looks perfect regardless of what screensize it is used on. This sounds much more difficult than it is. This new mentality allows us to be selfish, and decide how all screens will view our website. We do this by starting with the smallest width, probably somewhere around 480px, in the browser with, Windows Resizer, scale your website. Then begin expanding your website until the content looks a little weird. That is our break point, record that width. Continue expaning your websites and marking the break points as you proceed.</p>
+    </div>
+    <div class="break-point-fix grid_3">
+  		<h3>The Fix</h3>
+  		<p class="media-example3">Great we have a few break points, hopefully they are close to the widths we already established. Let's edit our media queries widths to the break point widths. Add any aditional media queries if neccessary. Now just like when making an adaptive website, edit the .css to prettify the webpage.</p>
+    </div>
+  </div>
+
+  <div class="fixed-sect-p congratulations grid_10">
+  	<h1 class="title">Congratulations!</h1>
+  	<p>I am sure you are stoked(amazed, shocked, excited all wrapped-up into one) right now. You should be! We now have a fully responsive webpage. That is pretty neat! Thank you for taking time to read this Cheatsheet ;). Remember, there are always ways to take your webpage to the next level. To keep the interest going, I will leave you with images. I am sure you have seen poor resolution images before, this will become more and more common as displays, like the retina, become more detailed. There are a few ways to deal with this. SVG or Scalable Vector Graphics do not use pixels and are able to stretch to any size without becoming distorted. I was going to add a section on making images crisper. However, it seems there are third party programs that do this better than our HTML code can. By cache-ing the photo at different sizes, certain apps allow for images to load incredibly fast and in different sizes based on device. I know this is all a lot of information at once, so I will leave you with a Treehouse video that discusses a few ways to perfect images.</p>
+  </div>
+  <div class="video congratulations grid_10">
+  	<h1 class="title"> Thank you Treehouse! </h1>
+  	<iframe src="https://www.youtube.com/embed/6ELNB4laVKM" frameborder="0" width="560" height="315"> </iframe>
+  </div>
+
+
+</body>
+
+
+</HTML>
